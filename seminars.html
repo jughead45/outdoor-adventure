@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang=en>
+	<head>
+		<link href="adventurestyles.css" rel="stylesheet" type="text/css">
+		<link href="mobile.css" rel="stylesheet"  media="screen" type="text/css">
+		<link href="printstyles.css" media="print" rel="stylesheet" type="text/css">
+		<meta charset = "UTF-8">
+		<!-- Author: Jhayvee Arai, 000899156 -->
+		<title>Outdoor Adventure Seminars</title>
+		
+		<style>
+			body {
+				font-family: Tahoma, Geneva, Verdana, sans-serif;
+			}
+			caption ul li{
+				display: inline;
+			}
+			table {
+				border-collapse: collapse;
+				border: 1px solid black;
+				width: 80%;
+				margin-left: 10%;
+			}
+			th {
+				width: 10%;
+			}
+			
+			th, td{
+				height: 50px;
+				border: 1px solid black;
+			}
+
+			.dust {
+				font-weight: bold;
+				text-align: center;
+				background-image: url("images/dust.jpg");
+				text-align: center;
+				
+			}
+			.caption-top, .legend{
+				text-align: left;
+				font-size: 1.3em;
+			}
+			.caption-bottom {
+				text-align: right;
+				caption-side: bottom; 
+			}
+			thead {
+				background-color: #002759;
+				color: white;
+			}
+			.square {
+				width: 20px;
+				height: 20px;
+				margin: 5px;
+			}
+			.legend {
+				display: flex;
+				align-items: center;
+			}
+			.day {
+				background-color: #DDEEFF;
+			}
+			
+			.begin {
+				background-color: orchid;
+			}
+			
+			.long {
+				background-color: cyan;
+			}
+			.hike {
+				background-color: #FFFACD;
+			}
+			.camp {
+				background-color: #F4AF60;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Outdoor Adventure Seminars</h1>
+			<h1>2022/2023</h1>
+		</header>
+		
+		<nav>
+			<a href="#">About Us</a>
+			<a href="#">Travel</a>
+			<a href="#">Photos</a>
+			<a href="#">Shop</a>
+			<a href="reviews.html">Reviews</a>
+			<a href="seminars.html" class="selected">Seminars</a>
+			<a href="#">Events</a>
+		</nav>
+		
+		<main>	
+			<table>
+				<caption>
+					<div class="caption-top">Legend:</div>
+					<div class="legend">
+						<div class="square begin"></div>Beginner Cycling
+						<div class="square long"></div>Long Distance
+						<div class="square hike"></div>Hiking
+						<div class="square camp"></div>Camping
+					</div>
+				</caption>
+			</table>
+			<table>
+				<caption class="caption-bottom">Schedule is subject to change</caption>
+
+				<thead>
+					<tr>
+						<th>Day</th>
+						<th>7 am - 9 am</th>
+						<th>9 am - 11 am</th>
+						<th>11 am - 12 pm</th>
+						<th>12 pm - 2 pm</th>
+						<th>2 pm - 4 pm</th>
+						<th>6 pm - 8 pm</th>
+						<th>8 pm - 10 pm</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Monday</th>
+						<td class="begin">Beginner Cycling</td>
+						<td class="hike">Hiking</td>
+						<td colspan="5" class="camp">Camping</td>
+					</tr>
+					<tr>
+						<th>Tuesday</th>
+						<td colspan="7" class="dust">Reserved for groups</td>
+					</tr>
+					<tr>
+						<th>Wednesday</th>
+						<td rowspan="2" class="long">Long Distance Cycling Part 1</td>
+						<td></td>
+						<td class="begin">Beginner Cycling</td>
+						<td rowspan="2" class="camp">Camping in Asia</td>
+						<td rowspan="2" class="long">Long Distance Cycling Part 2</td>
+						<td rowspan="3" colspan="2" class="hike">Hiking</td>
+					</tr>
+					<tr>
+						<th>Thursday</th>
+						<td class="camp">Camping</td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>Friday</th>
+						<td rowspan="4" class="camp">Camping in Europe</td>
+						<td colspan="2" class="begin">Beginner Cycling</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>Saturday</th>
+						<td colspan="3" rowspan="2" class="hike">Hiking</td>
+						<td class="begin">Beginner Cycling</td>
+						<td rowspan="2" colspan="2" class="long">Long Distance Cycling Part 1 and Part 2</td>
+					</tr>
+					<tr>
+						<th>Sunday</th>
+						<td></td>
+					</tr>
+					<tr>
+						<th>Holidays</th>
+						<td colspan="2" class="long">Long Distance Cycling</td>
+						<td colspan="4" class="dust">No Seminars</td>
+					</tr>
+				</tbody>
+			</table>
+		</main>
+		
+		<footer>
+			<img src="images/outdooradventurehorizontal.png" alt="logopic">
+		</footer>
+	
+	</body>
+</html>

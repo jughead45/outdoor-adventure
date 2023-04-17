@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang=en>
+	<head>
+		<link href="adventurestyles.css" rel="stylesheet" type="text/css">
+		<link href="mobile.css" rel="stylesheet"  media="screen" type="text/css">
+		<link href="printstyles.css" media="print" rel="stylesheet" type="text/css">
+		<meta charset = "UTF-8">
+		<!-- Author: Jhayvee Arai, 000899156 -->
+		<title>Outdoor Adventure Reviews</title>
+		<style>
+			body {
+				font-family: Tahoma, Geneva, Verdana, sans-serif;
+			}
+
+			header {
+				text-align: center;
+			}
+			form {
+				background-color: rebeccapurple;
+				color: white;
+				padding: 15px;
+				border: 3px black solid;
+				margin-left: 140px;
+				margin-right: 140px;
+			}
+			fieldset {
+				border: 2px white solid;
+				margin-bottom: 15px;
+			}
+			.selection select {
+				display: block;
+				margin-bottom: 10px;
+			}
+			.info input {
+				display: block;
+				background-color: orchid;
+			}
+			.info label {
+				/* border: 1px solid black; */
+				float: left;
+				width: 110px;
+				text-align: right;
+				margin-right: 10px;
+			}
+			.textcomments textarea {
+				display: block;
+				margin-bottom: 10px;
+			}
+			.buttons input{
+				background-color: orchid;
+				color: black;
+				font-weight: bold;
+				font-size: 1.1em;
+			}
+			.screenshot img{
+				display: block;
+				margin: 15px auto;
+			}
+			/* label {
+				float: left;
+				width: 110px;
+				text-align: right;
+				margin-right: 10px;
+			} */
+		</style>
+	</head>
+	
+	<body>
+		<header>
+			<h1>Outdoor Adventure Trip Reviews</h1>
+			<h1>2022/2023</h1>
+		</header>
+		
+		<nav>
+			<a href="#">About Us</a>
+			<a href="#">Travel</a>
+			<a href="#">Photos</a>
+			<a href="#">Shop</a>
+			<a href="reviews.html" class="selected">Reviews</a>
+			<a href="seminars.html">Seminars</a>
+			<a href="#">Events</a>
+		</nav>
+		
+		<main>
+			<form method="post" action="https://csunix.mohawkcollege.ca/tooltime/showit.pl">
+				<fieldset>
+					<legend>About You (optional)</legend>
+					<div class="selection">
+						<label for="season-select">I usually prefer to trips this time of year(select all that apply):</label>
+						
+						<select name="pref" id="season-select" multiple>
+							<option value="Winter">Winter</option>
+							<option value="Spring">Spring</option>
+							<option value="Summer">Summer</option>
+							<option value="Fall">Fall</option>
+						</select>
+					</div>
+					<div class="info">
+						<label for="firstname-input">First Name</label>
+						<input type="text" id="firstname-input" name="firstname" maxlength="20">
+
+						<label for="lastname-input">Last Name</label>
+						<input type="text" id="lastname-input" name="lastname" maxlength="20">
+
+						<label for="phonenumber-input">Phone Number</label>
+						<input type="tel" id="phonenumber-input" name="phone" placeholder="123-456-7890" maxlength="12" size="13">
+
+						<label for="emailadd-input">Email Address</label>
+						<input type="email" id="emailadd-input" name="emailaddress" placeholder="name@example.com" maxlength="40" size="33" required>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>Trip Reviews</legend>
+					
+					<div>
+						<label for="location-select"></label>
+						<select name="location" id="location-select">
+							<option value="Alberta Rural">Alberta Rural</option>
+							<option value="B.C. Coast" selected>B.C. Coast</option>
+							<option value="Ontario Lake Superior">Ontario Lake Superior</option>
+							<option value="PEI">PEI</option>
+							<option value="Nova Scotia Cabot Trail">Nova Scotia Cabot Trail</option>
+						</select>
+						<select name="duration" id="days-selected">
+							<option value="5d">5 Days</option>
+							<option value="7d">7 Days</option>
+							<option value="10d">10 Days</option>
+							<option value="14d">14 Days</option>
+						</select>
+					</div>
+					<br>
+					<div>
+						<label>Your rating:</label>
+					</div>
+					<div>
+						<input type="radio" id="rate4" name="rating" value="4" checked>
+						<label for="rate4">
+							<img src="images/wheel_sm.jpg" alt="wheelpic">
+							<img src="images/wheel_sm.jpg" alt="wheelpic">
+							<img src="images/wheel_sm.jpg" alt="wheelpic">
+							<img src="images/wheel_sm.jpg" alt="wheelpic">
+						</label>
+					</div>
+					<div>
+						<input type="radio" id="rate3" name="rating" value="3">
+						<label for="rate3">
+							<img src="images/wheel_sm.jpg" alt="wheelpic">
+							<img src="images/wheel_sm.jpg" alt="wheelpic">
+							<img src="images/wheel_sm.jpg" alt="wheelpic">
+						</label>
+					</div>
+					<div>
+						<input type="radio" id="rate2" name="rating" value="2">
+						<label for="rate2">
+							<img src="images/wheel_sm.jpg" alt="wheelpic">
+							<img src="images/wheel_sm.jpg" alt="wheelpic">
+						</label>
+					</div>
+					<div>
+						<input type="radio" id="rate1" name="rating" value="1">
+						<label for="rate1">
+							<img src="images/wheel_sm.jpg" alt="wheelpic">
+						</label>
+					</div>
+					<div class="textcomments">
+						<label for="comments">Comments</label>
+						<textarea id="comments" name="comments" rows="7" cols="65" required></textarea>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>I would be interested in these trips: (check all that apply)</legend>
+					
+					<div>
+						<input type="checkbox" id="sea" name="interested" value="sea or lake">
+						<label for="sea">Sea or Lake Coast</label>
+					</div>
+					<div>
+						<input type="checkbox" id="rural" name="interested" value="rural">
+						<label for="rural">Rural</label>
+					</div>
+					<div>
+						<input type="checkbox" id="mountains" name="interested" value="mountains" checked>
+						<label for="mountains">Mountains</label>
+					</div>
+					<div>
+						<input type="checkbox" id="others" name="interested" value="others">
+						<label for="others">Other (please specify)</label>
+						<input type="text" id="otherdestination" name="otherdestination">
+					</div>
+				</fieldset>
+				
+				<div class="buttons">
+					<input type="submit" value="SEND REVIEW">
+					<input type="reset" value="CANCEL">
+					<input type = "hidden" name = "formname" value ="Jhayvee Arai Trip Review">
+				</div>
+			</form>
+			
+			<div class="screenshot">
+				<img src="images/screenshot.jpg" alt="screenshotpic" >
+			</div>
+		</main>
+		
+		<footer>
+			<img src="images/outdooradventurehorizontal.png" alt="logopic">
+		</footer>
+	</body>
+</html>
