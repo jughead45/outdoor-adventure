@@ -1,0 +1,14 @@
+header{
+	text-align: center;
+	background-color: #E9EFFF
+}
+
+footer {
+	border-top: 3px solid black;
+	text-align: center;
+	padding: 20px;
+}
+
+.selected {
+	background-color: darkslateblue;
+}
